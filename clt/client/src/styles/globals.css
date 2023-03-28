@@ -1,0 +1,468 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bad+Script&family=Bebas+Neue&family=Cabin+Sketch:wght@400;700&family=Castoro&family=Cinzel:wght@500;600;700&family=Comfortaa:wght@400;500&family=Dosis:wght@300;400&family=Fredoka:wght@300&family=Gloria+Hallelujah&family=Halant:wght@300&family=IBM+Plex+Sans:wght@100;200;300;500&family=Josefin+Sans:ital,wght@0,200;0,500;1,100&family=M+PLUS+1:wght@200&family=Marcellus+SC&family=Maven+Pro:wght@500;600&family=Montserrat+Alternates:wght@100&family=Montserrat:wght@100;400&family=Mukta:wght@200&family=Nanum+Gothic:wght@700&family=News+Cycle&family=Newsreader:opsz,wght@6..72,200;6..72,400&family=Nunito+Sans&family=Open+Sans&family=PT+Sans+Narrow:wght@400;700&family=Phudu:wght@300;400&family=Playfair+Display:wght@500;900&family=Press+Start+2P&family=Prompt&family=Quicksand:wght@300;400&family=Raleway:ital,wght@0,200;0,500;1,400&family=Readex+Pro:wght@600&family=Reem+Kufi+Fun:wght@400;500&family=Roboto:wght@100&family=Rubik+Vinyl&family=Sarabun:wght@200&family=Satisfy&family=Signika:wght@300&family=Source+Code+Pro:wght@300;700&family=Syncopate:wght@400;700&family=Tajawal&family=Ubuntu:ital,wght@0,300;1,700&family=Varela+Round&display=swap");
+
+/* font-family: 'Amatic SC', cursive;
+font-family: 'Bad Script', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Castoro', serif;
+font-family: 'Cinzel', serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Dosis', sans-serif;
+font-family: 'Fredoka', sans-serif;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Halant', serif;
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'M PLUS 1', sans-serif;
+font-family: 'Marcellus SC', serif;
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'News Cycle', sans-serif;
+font-family: 'Newsreader', serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Phudu', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Prompt', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Readex Pro', sans-serif;
+font-family: 'Reem Kufi Fun', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Vinyl', cursive;
+font-family: 'Sarabun', sans-serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Signika', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Syncopate', sans-serif;
+font-family: 'Tajawal', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Varela Round', sans-serif; */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.home,
+.create_event,
+.eventDetails,
+.userDashboard,
+.userEdit,
+.search_main {
+  background: #181818;
+}
+
+.create,.eventDetails,.userEdit,.search {
+  min-height: 100vh;
+}
+
+.eventDetails,.userDashboard{
+  height: max-content;
+  padding-bottom: 3rem;
+}
+
+nav {
+  background: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logout,
+.createe {
+  background: #64646460;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+/* .logout {
+  position: absolute;
+  top: 12px;
+  right: 107px;
+} */
+
+.create:hover,
+.logout:hover {
+  transform: scale(1.02);
+  transition: transform 0.1s linear;
+  background: #7f7f7f60;
+}
+
+.create:active,
+.logout:active {
+  transform: scale(0.9);
+}
+
+.logo_text {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-family: "Tajawal", sans-serif;
+  font-size: 2rem;
+}
+
+.auth {
+  background: black;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+.auth_inp {
+  border: 1px solid rgb(151, 151, 151);
+}
+
+.auth_form {
+  width: max-content;
+  height: max-content;
+  padding: 1rem;
+  background: rgba(74, 74, 74, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  border: 1px solid rgba(74, 74, 74, 0.74);
+}
+
+.auth_role_options {
+  background: #4a4a4a2e;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  border: 1px solid rgba(74, 74, 74, 0.74);
+  color: white;
+}
+
+.btn_auth {
+  background: rgba(41, 255, 0, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(41, 255, 0, 0.36);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+}
+
+.auth_intro_section {
+  background-image: url("../../assets/authbg.png");
+  background-size: cover;
+  background-blend-mode: darken;
+  border-bottom: 0.4rem solid gray;
+}
+
+.section_info1 {
+  border-bottom: 0.4rem solid gray;
+}
+
+.appTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: "Readex Pro", sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-left: 3rem;
+}
+
+.auth {
+  width: 100%;
+  height: 280vh;
+  padding-bottom: 3rem;
+}
+
+/* @media (min-width: 576px) { ... } */
+
+@media (max-width: 768px) {
+  .img_res {
+    padding-top: 2rem;
+  }
+
+  .form_res {
+    padding-top: 2rem;
+  }
+
+  .appTitle {
+    font-size: 4rem;
+    margin-left: 0.2rem;
+  }
+
+  .section_info1 {
+    height: 100vh;
+  }
+
+  .auth {
+    width: 100%;
+    height: 400vh;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 558px) {
+  .appTitle {
+    font-size: 2rem;
+  }
+}
+
+/* @media (min-width: 992px) { ... } */
+
+/* @media (min-width: 1200px) { ... } */
+
+/* @media (min-width: 1400px) { ... } */
+
+.auth_event_title {
+  font-weight: 700;
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 2.2rem;
+  text-align: left;
+}
+
+.event_img {
+  width: 600px;
+  height: 370px;
+}
+
+.eventCard {
+  width: 200px;
+  height: 400px;
+  background: rgba(33, 33, 33, 0.349);
+  overflow: hidden;
+  padding: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: 1rem;
+}
+
+.eventCard:hover {
+  background: rgba(44, 44, 44, 0.349);
+}
+
+.category {
+  background: #000000b7;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  border-radius: 1rem;
+}
+
+.cost {
+  background: #000000b7;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  border-radius: 1rem;
+  color: yellow;
+}
+
+@media (max-width: 918px) {
+  .eventCard {
+    margin-top: 1rem;
+  }
+}
+
+.mmc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create_event_heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-left: 1rem;
+}
+
+.create_event {
+  width: 100%;
+  height: max-content;
+  padding-bottom: 3rem;
+}
+
+.userDashboard {
+  width: 100%;
+  height: max-content;
+  padding-bottom: 3rem;
+}
+
+
+
+.socialMedia{
+  width: max-content;
+  height: max-content;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: #b3b3b3be;
+  border-radius: 3rem;
+  transition: all 0.3s linear;
+}
+
+.socialMedia:hover{
+transform: scale(1.02);
+}
+
+.socialMedia:active{
+transform: scale(0.98);
+}
+
+
+
+
+
+
+/* Like button */
+.like-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.like-button:focus {
+  outline: none;
+}
+
+.like_btn_insta{
+  margin-left: 2rem;
+}
+
+.like-button:hover .heart-icon {
+  animation: pulse 0.8s ease-in-out;
+}
+
+.heart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.heart-icon svg {
+  fill: #ed4956;
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: fill 0.3s ease-in-out;
+}
+
+.like-button:hover .heart-icon svg {
+  fill: #dc3545;
+}
+
+.like-text {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+ .bg_details{
+  height: 300px;
+ }
+}
+
+
+
+
+.name_of_user{
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+.email_of_user{
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+
+}
+.role_of_user{
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+}
+
+.edit_me{
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: max-content;
+  height: max-content;
+  padding: 0.7rem 2.4rem 0.7rem 2.4rem;
+  background: #a7a7a7a5;
+  color: black;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-top: 3rem !important;
+  transition: all 0.3s linear;
+}
+.edit_me:hover{
+  transform: scale(1.04);
+  box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.258);
+}
+.edit_me:active{
+  transform: scale(0.96);
+}
+
+.nav_dropdown{
+  padding-top:0.6rem ;
+  padding-left: 0.5rem;
+  width: 130px;
+  height: 100px;
+  position: absolute;
+  top: 60px;
+  border-radius: 0.5rem;
+}
+
+.search_inpt{
+  background: rgba(50, 50, 50, 0.692);
+  border: 1px solid white;
+  color: white;
+  padding: 5px;
+  padding-left: 1.9rem;
+}
+
+
+.search_main{
+  width:100%;
+  height:max-content;
+  min-height: 100vh;
+  padding-bottom:3rem;
+}
