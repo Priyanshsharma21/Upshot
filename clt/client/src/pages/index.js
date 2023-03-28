@@ -43,7 +43,7 @@ export default function Home() {
         }
       };
       
-      const res = await axios.get(`http://localhost:8000/api/v1/event`,options)
+      const res = await axios.get(`https://upshot.onrender.com/api/v1/event`,options)
       const events = res.data.events
       setEvents(events)
     } catch (error) {
@@ -73,7 +73,7 @@ export default function Home() {
 // export async function getStaticProps() {
 //   try {
 //     const token = Cookies.get('token');
-//     const res = await axios.get(`http://localhost:8000/api/v1/event`,{
+//     const res = await axios.get(`https://upshot.onrender.com/api/v1/event`,{
 //       headers: {
 //         'Authorization': `Bearer ${token}`
 //       }

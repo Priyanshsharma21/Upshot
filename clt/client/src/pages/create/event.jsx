@@ -64,7 +64,7 @@ const Event = () => {
 
 
       
-      const res = await axios.post('http://localhost:8000/api/v1/event', apiEventData, {
+      const res = await axios.post('https://upshot.onrender.com/api/v1/event', apiEventData, {
             headers: {
               'Authorization': `Bearer ${token}`
             }

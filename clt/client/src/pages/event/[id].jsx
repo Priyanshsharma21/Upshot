@@ -37,7 +37,7 @@ const EventDetails = ({event}) => {
       }
     };
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/event/likes/${eventId}`,options);
+      const res = await axios.get(`https://upshot.onrender.com/api/v1/event/likes/${eventId}`,options);
       const updatedLikes = res.data.likes; // assuming the API response includes the updated list of likes
       setLiked(prev=>!prev);
       console.log(res.data)
@@ -56,7 +56,7 @@ const EventDetails = ({event}) => {
           'Authorization': `Bearer ${token}`
         }
       };
-      const res = await axios.delete(`http://localhost:8000/api/v1/event/${event._id}`,options)
+      const res = await axios.delete(`https://upshot.onrender.com/api/v1/event/${event._id}`,options)
 
       console.log(res.data)
 
@@ -178,7 +178,7 @@ export async function getServerSideProps(context){
       }
     };
 
-    const res = await axios.get(`http://localhost:8000/api/v1/event/${eventId}`,options)
+    const res = await axios.get(`https://upshot.onrender.com/api/v1/event/${eventId}`,options)
     const event = res.data.event
 
     return {

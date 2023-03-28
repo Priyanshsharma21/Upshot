@@ -33,7 +33,7 @@ const EventCard = ({post}) => {
         }
       };
       try {
-        const res = await axios.get(`http://localhost:8000/api/v1/event/likes/${eventId}`,options);
+        const res = await axios.get(`https://upshot.onrender.com/api/v1/event/likes/${eventId}`,options);
         const updatedLikes = res.data.likes; // assuming the API response includes the updated list of likes
         console.log(res.data)
         // setLikeActive((prev) => !prev);

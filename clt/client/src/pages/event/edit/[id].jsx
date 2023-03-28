@@ -63,7 +63,7 @@ const EditEvent = ({post}) => {
   }
 
       
-      const res = await axios.put(`http://localhost:8000/api/v1/event/${post._id}`, apiEventData, {
+      const res = await axios.put(`https://upshot.onrender.com/api/v1/event/${post._id}`, apiEventData, {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -161,7 +161,7 @@ export async function getServerSideProps(context){
       }
     };
 
-    const res = await axios.get(`http://localhost:8000/api/v1/event/${eventId}`,options)
+    const res = await axios.get(`https://upshot.onrender.com/api/v1/event/${eventId}`,options)
     const event = res.data.event
 
     return {

@@ -22,7 +22,7 @@ const userdetails = ({user}) => {
 
 
     try {
-      const res = await axios.put(`http://localhost:8000/api/v1/userdashboard/update`, formData, {
+      const res = await axios.put(`https://upshot.onrender.com/api/v1/userdashboard/update`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -93,7 +93,7 @@ export async function getServerSideProps(context){
       }
     };
 
-    const res = await axios.get(`http://localhost:8000/api/v1/userdashboard`,options)
+    const res = await axios.get(`https://upshot.onrender.com/api/v1/userdashboard`,options)
     const user = res.data.user
 
     return {

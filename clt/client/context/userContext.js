@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
       password,
     };
   
-    const res = await axios.post("http://localhost:8000/api/v1/login", userData);
+    const res = await axios.post("https://upshot.onrender.com/api/v1/login", userData);
   
     const data = await res.data;
     setUser(data.user);
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
 
   const logout = async () => {
-    const res = await axios.get("http://localhost:8000/api/v1/logout");
+    const res = await axios.get("https://upshot.onrender.com/api/v1/logout");
     setUser(null);
     setUserToken(null);
     localStorage.removeItem("user");
@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
       photo,
     };
   
-    const res = await axios.post("http://localhost:8000/api/v1/signup", formData);
+    const res = await axios.post("https://upshot.onrender.com/api/v1/signup", formData);
     const data = await res.data;
     setUser(data.user);
     setUserToken(data.token);

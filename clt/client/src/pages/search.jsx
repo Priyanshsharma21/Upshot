@@ -44,7 +44,7 @@ export async function getServerSideProps(context){
         }
       };
   
-      const res = await axios.get(`http://localhost:8000/api/v1/event`,options)
+      const res = await axios.get(`https://upshot.onrender.com/api/v1/event`,options)
       const events = res.data.events
   
       return {
