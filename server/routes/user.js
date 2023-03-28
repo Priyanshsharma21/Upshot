@@ -21,3 +21,5 @@ router.get('/manager/users',isLoggedIn,customRole("organizer"),organizerAllUsers
 
 
 export default router
+
+
