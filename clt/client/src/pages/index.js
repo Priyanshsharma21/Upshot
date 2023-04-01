@@ -70,28 +70,3 @@ export default function Home() {
 }
 
 
-// export async function getStaticProps() {
-//   try {
-//     const token = Cookies.get('token');
-//     const res = await axios.get(`https://upshot.onrender.com/api/v1/event`,{
-//       headers: {
-//         'Authorization': `Bearer ${token}`
-//       }
-//     })
-//     const events = res.data.events
-
-
-//     return {
-//       props: {
-//         events : events,
-//       },
-//     }
-//   } catch (error) {
-//     console.error(error)
-//     return {
-//       props: {
-//         events: [],
-//       },
-//     }
-//   }
-// }
