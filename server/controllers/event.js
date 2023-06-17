@@ -11,7 +11,7 @@ dotenv.config()
 
 
 export const getAllEvents = BigPromise(async (req, res, next) => {
-    const events = await Event.find()
+    const events = await Event.find().sort({ _id: -1 });
 
     res.status(200).json({
         success: true,
